@@ -69,12 +69,12 @@ function App() {
           className="flex flex-row items-center justify-between gap-[20px] bg-white border-b-[1.0px] border-[#DEDEDF]"
           variants={itemVariants}
         >
-          <div className="pt-[5px] pl-[8px] w-[200px]">
+          <div className="pt-[5px] pl-[8px] lg:w-[200px]">
             <MenuItem icon="home.svg" title="Dashboard" />
           </div>
-          <div className="flex flex-row items-center gap-[16px] px-[10px]">
+          <div className="flex-1 flex flex-row items-center justify-end gap-[16px] px-[10px]">
             <div
-              className="w-[214px] flex flex-row items-center gap-[8px] px-[13px] py-[7px] rounded-[97.99px] border-[0.98px] border-[#D0D5DD]"
+              className="hidden lg:flex lg:w-[214px] flex-row items-center gap-[8px] px-[13px] py-[7px] rounded-[97.99px] border-[0.98px] border-[#D0D5DD]"
               style={{ boxShadow: "0px 0.98px 1.96px 0px #1018280D" }}
             >
               <img src={svgPath("search.svg")} alt="Search icon" />
@@ -86,6 +86,11 @@ function App() {
                 placeholder="Search"
               />
             </div>
+            <img
+              src={svgPath("search.svg")}
+              alt="Search icon"
+              className={`lg:hidden w-[22px] h-[22px]`}
+            />
             <img src={svgPath("bell.svg")} alt="Notification icon" />
             <img src={svgPath("profile.svg")} alt="Profile Photo icon" />
           </div>
