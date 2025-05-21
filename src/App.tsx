@@ -101,12 +101,20 @@ function App() {
           variants={itemVariants}
         >
           <motion.div
-            className="flex flex-row items-center justify-between pt-[6px]"
+            className="flex flex-col lg:flex-row gap-[8px] items-start lg:items-center justify-between pt-[6px]"
             variants={itemVariants}
           >
-            <h2 className="flex text-[18.0px] font-bold text-[#121212]">
-              Hi Nazeer, what would you like to do today?
-            </h2>
+            <div className="flex flex-col gap-[4px]">
+              <h2 className="flex text-[18.0px] font-bold text-[#121212]">
+                Hi Nazeer, what would you like to do today?
+              </h2>
+              <motion.span
+                className="flex text-[12.0px] font-medium text-[#121212]"
+                variants={itemVariants}
+              >
+                Last login: 26/11/2024 14:39:58
+              </motion.span>
+            </div>
             <div className="relative">
               <div
                 className="flex flex-row items-center gap-[8px] rounded-[4.0px] border-[1.0px] border-[#D0D5DD] px-[13px] py-[8px] cursor-pointer"
@@ -140,14 +148,14 @@ function App() {
               )}
             </div>
           </motion.div>
-
+          {/* 
           <motion.span
             className="flex text-[12.0px] font-medium text-[#121212]"
             variants={itemVariants}
           >
             Last login: 26/11/2024 14:39:58
             <span className="flex font-normal text-[#121212]"></span>
-          </motion.span>
+          </motion.span> */}
 
           <motion.div
             className="flex flex-col gap-[8px] bg-white rounded-[10.0px] border-[1.0px] border-[#E2E2E2] p-[16px] mt-[12px]"
